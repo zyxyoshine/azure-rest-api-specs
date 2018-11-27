@@ -29,15 +29,15 @@ openapi-type: data-plane
 tag: package-preview-2222-11
 ```
 
-
 ### Tag: package-preview-2222-11
 
 These settings apply only when `--tag=package-preview-2222-11` is specified on the command line.
 
-```yaml $(tag) == 'package-preview-2222-11'
+``` yaml $(tag) == 'package-preview-2222-11'
 input-file:
   - Microsoft.DataLakeStore/preview/2222-11-03/filesystem.json
 ```
+
 ### Tag: package-2016-11
 
 These settings apply only when `--tag=package-2016-11` is specified on the command line.
@@ -100,4 +100,14 @@ java:
   license-header: MICROSOFT_MIT_NO_CODEGEN
   payload-flattening-threshold: 1
   output-folder: $(azure-libraries-for-java-folder)/azure-datalake/store
+```
+
+## Suppression
+
+``` yaml
+directive:
+  - suppress: LROStatusCodesReturnTypeSchema
+    from: filesystem.json
+    where: '$.paths["/WebHdfsExt/{path}"].put.responses["200"]'
+    reason: dsaoidjapodw
 ```
