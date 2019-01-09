@@ -9,4 +9,8 @@ typescript:
   package-name: "@azure/arm-network"
   output-folder: "$(typescript-sdks-folder)/packages/@azure/arm-network"
   generate-metadata: true
+  skip-subtypes:
+    - BaseResource
+    - SubResource
+    - Resource
 ```
