@@ -29,15 +29,15 @@ openapi-type: arm
 tag: package-preview-2203-10
 ```
 
-
 ### Tag: package-preview-2203-10
 
 These settings apply only when `--tag=package-preview-2203-10` is specified on the command line.
 
-```yaml $(tag) == 'package-preview-2203-10'
+``` yaml $(tag) == 'package-preview-2203-10'
 input-file:
   - Microsoft.DevTestLab/preview/2203-10-02/DTL.json
 ```
+
 ### Tag: package-2018-09
 
 These settings apply only when `--tag=package-2018-09` is specified on the command line.
@@ -193,4 +193,14 @@ java:
   output-folder: $(azure-libraries-for-java-folder)/devtestlab/resource-manager/v2015_05_21_preview
 regenerate-manager: true
 generate-interface: true
+```
+
+## Suppression
+
+``` yaml
+directive:
+  - suppress: SecurityDefinitionsStructure
+    from: DTL.json
+    where: $.securityDefinitions
+    reason: I wanna suppress
 ```
