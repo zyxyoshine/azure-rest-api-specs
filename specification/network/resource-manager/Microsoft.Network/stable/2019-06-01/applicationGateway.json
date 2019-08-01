@@ -2407,12 +2407,20 @@
             "$ref": "#/definitions/ApplicationGatewayFirewallRuleGroup"
           },
           "description": "The rule groups of the web application firewall rule set."
+        },
+		"tiers": {
+          "type": "array",
+          "items": {
+			"$ref": "#/definitions/ApplicationGatewayTier"
+          },
+          "description": "The application gateway tiers that support this rule set."
         }
       },
       "required": [
         "ruleSetType",
         "ruleSetVersion",
-        "ruleGroups"
+        "ruleGroups",
+		"tiers"
       ],
       "description": "Properties of the web application firewall rule set."
     },
