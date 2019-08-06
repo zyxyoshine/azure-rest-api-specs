@@ -333,6 +333,7 @@ datalakeanalytics
 datalakestore
 Datamasking
 datamigration
+Disambiguations
 Dataset
 datasets
 datasource
@@ -439,6 +440,7 @@ Enein
 engagementfabric
 enquoted
 entitysearch
+entitydocument
 entrypoint
 environmentsettings
 errordetail
