@@ -5,6 +5,7 @@ These settings apply only when `--cli` is specified on the command line.
 ``` yaml $(cli)
 cli:
   namespace: azure.mgmt.alertsmanagement
+  flatten-all: true
   test-scenario:
     - name: PutActionRule
     - name: Create or update a Smart Detector alert rule
