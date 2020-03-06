@@ -433,7 +433,48 @@
           "type": "string"
         }
       }
-    }
+    },
+    "GenericVM": {
+        "description": "The common Virtual Machine Model definition.",
+        "properties": {
+          "vmId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Specifies the VM unique ID which is a 128-bits identifier that is encoded and stored in all Azure IaaS VMs SMBIOS and can be read using platform BIOS commands."
+          },
+          "provisioningState": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The provisioning state, which only appears in the response."
+          },
+          "host": {
+            "type": "string",
+            "description": "Specifies information about the dedicated host that the virtual machine resides in. Refers to another resource Id."
+          },
+          "osName": {
+            "type": "string",
+            "description": "Specifies the OS running on this machine."
+          },
+          "osType": {
+            "type": "string",
+            "description": "This property allows you to specify the type of the OS that is included in the disk if creating a VM from user-image or a specialized VHD. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**",
+            "enum": [
+              "Windows",
+              "Linux"
+            ],
+            "x-ms-enum": {
+              "name": "OperatingSystemTypes",
+              "modelAsString": false
+            }
+          }
+        },
+        "allOf": [
+            {
+                "$ref": "#/definitions/Resource"
+            }
+        ],
+        "x-ms-azure-resource": true
+      }
   },
   "parameters": {
     "SubscriptionIdParameter": {
