@@ -158,7 +158,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -201,7 +201,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -240,7 +240,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -276,7 +276,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -345,7 +345,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -416,7 +416,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -465,7 +465,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -510,7 +510,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -546,7 +546,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -616,7 +616,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -692,7 +692,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -745,7 +745,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -802,7 +802,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -850,7 +850,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -907,7 +907,7 @@
           "default": {
             "description": "Error response describing why the operation failed.",
             "schema": {
-              "$ref": "#/definitions/errorResponse"
+              "$ref": "#/definitions/ErrorResponse"
             }
           }
         },
@@ -1368,11 +1368,17 @@
         "value"
       ]
     },
-    "errorResponse": {
-      "description": "An error response from the service.",
+    "ErrorResponse": {
+      "description": "Describe the format of an Error response.",
+      "type": "object",
       "properties": {
-        "error": {
-          "$ref": "#/definitions/errorResponseBody"
+        "code": {
+          "description": "Error code",
+          "type": "string"
+        },
+        "message": {
+          "description": "Error message indicating why the operation failed.",
+          "type": "string"
         }
       }
     },
