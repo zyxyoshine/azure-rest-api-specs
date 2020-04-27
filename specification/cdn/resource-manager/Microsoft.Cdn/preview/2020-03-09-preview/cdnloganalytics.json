@@ -29,10 +29,10 @@
     }
   },
   "paths": {
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/metrics/{metricName}": {
-      "get": {
-        "tags": ["Log analytics"],
-        "operationId": "LogAnalytics_Metrics_Get",
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/getLogAnalyticsMetrics": {
+      "post": {
+        "tags": ["LogAnalytics"],
+        "operationId": "LogAnalytics_GetLogAnalyticsMetrics",
         "x-ms-examples": {
           "LogAnalytics_Metrics_Get": {
             "$ref": "./examples/LogAnalytics_Metrics_Get.json"
@@ -50,44 +50,17 @@
             "$ref": "#/parameters/ProfileNameParameter"
           },
           {
-            "$ref": "#/parameters/MetricNameParameter"
-          },
-          {
-            "$ref": "#/parameters/DateTimeBeginParameter"
-          },
-          {
-            "$ref": "#/parameters/DateTimeEndParameter"
-          },
-          {
-            "$ref": "#/parameters/GranularityParameter"
-          },
-          {
-            "$ref": "#/parameters/ContinentParameter"
-          },
-          {
-            "$ref": "#/parameters/CountryOrRegionParameter"
-          },
-          {
-            "$ref": "#/parameters/EndpointParameter"
-          },
-          {
-            "$ref": "#/parameters/CustomDomainParameter"
-          },
-          {
-            "$ref": "#/parameters/ApplicationProtocolParameter"
-          },
-          {
-            "$ref": "#/parameters/NetworkProtocolParameter"
-          },
-          {
             "$ref": "#/parameters/ApiVersionParameter"
+          },
+          {
+            "$ref": "#/parameters/MetricsRequestParameter"
           }
         ],
         "responses": {
           "200": {
             "description": "Describe the result of a successful operation.",
             "schema": {
-              "$ref": "#/definitions/MetricResult"
+              "$ref": "#/definitions/MetricsResponse"
             }
           },
           "default": {
@@ -99,10 +72,10 @@
         }
       }
     },
-    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/rankings/{rankingName}": {
-      "get": {
-        "tags": ["Log analytics"],
-        "operationId": "LogAnalytics_Rankings_Get",
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/getLogAnalyticsRankings": {
+      "post": {
+        "tags": ["LogAnalytics"],
+        "operationId": "LogAnalytics_GetLogAnalyticsRankings",
         "x-ms-examples": {
           "LogAnalytics_Rankings_Get": {
             "$ref": "./examples/LogAnalytics_Rankings_Get.json"
@@ -120,23 +93,17 @@
             "$ref": "#/parameters/ProfileNameParameter"
           },
           {
-            "$ref": "#/parameters/RankingNameParameter"
-          },
-          {
-            "$ref": "#/parameters/DateTimeBeginParameter"
-          },
-          {
-            "$ref": "#/parameters/DateTimeEndParameter"
-          },
-          {
             "$ref": "#/parameters/ApiVersionParameter"
+          },
+          {
+            "$ref": "#/parameters/RankingsRequestParameter"
           }
         ],
         "responses": {
           "200": {
             "description": "Describe the result of a successful operation.",
             "schema": {
-              "$ref": "#/definitions/RankingResult"
+              "$ref": "#/definitions/RankingsResponse"
             }
           },
           "default": {
@@ -148,9 +115,9 @@
         }
       }
     },
-    "/providers/Microsoft.Cdn/continents": {
-      "get": {
-        "tags": ["Log analytics"],
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/getLogAnalyticsLocations": {
+      "post": {
+        "tags": ["LogAnalytics"],
         "operationId": "LogAnalytics_Continents_Get",
         "x-ms-examples": {
           "LogAnalytics_Continents_Get": {
@@ -160,6 +127,15 @@
         "description": "This is a sample get operation, please see guidelines in azure-rest-api-specs repository for more info",
         "parameters": [
           {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ProfileNameParameter"
+          },
+          {
             "$ref": "#/parameters/ApiVersionParameter"
           }
         ],
@@ -167,7 +143,7 @@
           "200": {
             "description": "Describe the result of a successful operation.",
             "schema": {
-              "$ref": "#/definitions/ContinentsResult"
+              "$ref": "#/definitions/ContinentsResponse"
             }
           },
           "default": {
@@ -179,19 +155,25 @@
         }
       }
     },
-    "/providers/Microsoft.Cdn/continents/{continentName}/countryOrRegions": {
-      "get": {
-        "tags": ["Log analytics"],
-        "operationId": "LogAnalytics_CountryOrRegions_Get",
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/getLogAnalyticsResources": {
+      "post": {
+        "tags": ["LogAnalytics"],
+        "operationId": "LogAnalytics_Continents_Get",
         "x-ms-examples": {
-          "LogAnalytics_CountryOrRegions_Get": {
-            "$ref": "./examples/LogAnalytics_CountryOrRegions_Get.json"
+          "LogAnalytics_Continents_Get": {
+            "$ref": "./examples/LogAnalytics_Continents_Get.json"
           }
         },
         "description": "This is a sample get operation, please see guidelines in azure-rest-api-specs repository for more info",
         "parameters": [
           {
-            "$ref": "#/parameters/ContinentNameParameter"
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ProfileNameParameter"
           },
           {
             "$ref": "#/parameters/ApiVersionParameter"
@@ -201,7 +183,7 @@
           "200": {
             "description": "Describe the result of a successful operation.",
             "schema": {
-              "$ref": "#/definitions/CountryOrRegionsResult"
+              "$ref": "#/definitions/ResourcesResponse"
             }
           },
           "default": {
@@ -215,7 +197,91 @@
     }
   },
   "definitions": {
-    "MetricResult": {
+    "MetricsRequest": {
+      "type": "object",
+      "required": [
+        "metrics",
+        "dateTimeBegin",
+        "dateTimeEnd",
+        "granularity"
+      ],
+      "properties": {
+        "metrics": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "clientRequestCount",
+              "clientRequestTraffic",
+              "clientRequestBandwidth",
+              "originRequestTraffic",
+              "originRequestBandwidth"
+            ]
+          }
+        },
+        "groupBy": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "applicationProtocol",
+              "cacheHitMiss",
+              "httpStatusCode"
+            ]
+          }
+        },
+        "dateTimeBegin": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dateTimeEnd": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "granularity": {
+          "type": "string",
+          "enum": [
+            "PT5M",
+            "PT1H",
+            "P1D"
+          ]
+        },
+        "continents": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "africa",
+              "antarctica",
+              "asia",
+              "australia",
+              "europe",
+              "northAmerica",
+              "southAmerica"
+            ]
+          }
+        },
+        "countryOrRegions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "endpoints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "customDomains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "MetricsResponse": {
       "description": "",
       "properties": {
         "dateTimeBegin": {
@@ -234,33 +300,112 @@
             "P1D"
           ]
         },
-        "unit": {
-          "type": "string",
-          "enum": [
-            "",
-            "%",
-            "B",
-            "bps"
-          ]
-        },
-        "data": {
+        "series": {
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
-              "dateTime": {
-                "type": "string",
-                "format": "date-time"
+              "metric": {
+                "type": "string"
               },
-              "value": {
-                "type": "number"
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "count",
+                  "bytes",
+                  "bitsPerSecond"
+                ]
+              },
+              "groups": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "dateTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "value": {
+                      "type": "number"
+                    }
+                  }
+                }
               }
             }
           }
         }
       }
     },
-    "RankingResult": {
+    "RankingsRequest": {
+      "type": "object",
+      "required": [
+        "metrics",
+        "dateTimeBegin",
+        "dateTimeEnd",
+        "granularity"
+      ],
+      "properties": {
+        "rankings": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "url",
+              "referrer",
+              "countryOrRegions"
+            ]
+          }
+        },
+        "metrics": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "clientRequestCount",
+              "clientRequestTraffic",
+              "clientRequestBandwidth",
+              "originRequestTraffic",
+              "originRequestBandwidth"
+            ]
+          }
+        },
+        "maxRanking": {
+          "type": "number"
+        },
+        "dateTimeBegin": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dateTimeEnd": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "endpoints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "customDomains": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "RankingsResponse": {
       "description": "",
       "properties": {
         "dateTimeBegin": {
@@ -271,40 +416,47 @@
           "type": "string",
           "format": "date-time"
         },
-        "rankingBegin": {
-          "type": "integer"
-        },
-        "rankingEnd": {
-          "type": "integer"
-        },
-        "unit": {
-          "type": "string",
-          "enum": [
-            "",
-            "%",
-            "B",
-            "bps"
-          ]
-        },
-        "data": {
+        "tables": {
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
               "ranking": {
-                "type": "integer"
-              },
-              "name": {
                 "type": "string"
               },
-              "value": {
-                "type": "number"
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "metrics": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "metric": {
+                            "type": "string"
+                          },
+                          "value": {
+                            "type": "integer"
+                          },
+                          "percentage": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
         }}
     },
-    "ContinentsResult": {
+    "ContinentsResponse": {
       "description": "",
       "properties": {
         "continents": {
@@ -312,10 +464,21 @@
           "items": {
             "type": "object",
             "properties": {
-              "name": {
+              "id": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "countryOrRegions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
                 "type": "string"
               },
-              "fallbackDisplayName": {
+              "continentId": {
                 "type": "string"
               }
             }
@@ -323,19 +486,42 @@
         }
       }
     },
-    "CountryOrRegionsResult": {
+    "ResourcesResponse": {
       "description": "",
       "properties": {
-        "countryOrRegions": {
+        "endpoints": {
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
+              "id": {
+                "type": "string"
+              },
               "name": {
                 "type": "string"
               },
-              "fallbackDisplayName": {
+              "history": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "customDomains": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
                 "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "endpointId": {
+                "type": "string"
+              },
+              "history": {
+                "type": "boolean"
               }
             }
           }
@@ -382,150 +568,28 @@
       "required": true,
       "type": "string"
     },
-    "EndpointNameParameter": {
-      "name": "endpointName",
-      "in": "path",
-      "description": "Name of the endpoint under the profile which is unique globally.",
-      "required": true,
-      "type": "string"
-    },
-    "MetricNameParameter": {
-      "name": "metricName",
-      "in": "path",
-      "description": "Name of the metric for the CDN log analytics.",
-      "required": true,
-      "type": "string",
-      "enum": [
-        "userRequestCount"
-      ]
-    },
-    "ContinentNameParameter": {
-      "name": "continentName",
-      "in": "path",
-      "required": true,
-      "type": "string",
-      "enum": [
-        "africa",
-        "antarctica",
-        "asia",
-        "australia",
-        "europe",
-        "northAmerica",
-        "southAmerica"
-      ],
-      "description": ""
-    },
-    "RankingNameParameter": {
-      "name": "rankingName",
-      "in": "path",
-      "required": true,
-      "type": "string",
-      "enum": [
-        "urls",
-        "referrers"
-      ],
-      "description": ""
-    },
-    "DateTimeBeginParameter": {
-      "name": "dateTimeBegin",
-      "in": "query",
-      "required": true,
-      "type": "string",
-      "format": "date-time",
-      "description": "The beginning of the date time range in UTC."
-    },
-    "DateTimeEndParameter": {
-      "name": "dateTimeEnd",
-      "in": "query",
-      "required": true,
-      "type": "string",
-      "format": "date-time",
-      "description": "The end of the date time range in UTC."
-    },
-    "GranularityParameter": {
-      "name": "granularity",
-      "in": "query",
-      "required": true,
-      "type": "string",
-      "description": "The granularity of the date time for each record.",
-      "enum": [
-        "PT5M",
-        "PT1H",
-        "P1D"
-      ]
-    },
-    "ContinentParameter": {
-      "name": "continent",
-      "in": "query",
-      "required": false,
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "collectionFormat": "csv",
-      "description": "The continent where the end users' requests are from. If it's specified, the countryOrRegion parameter must not be specified."
-    },
-    "CountryOrRegionParameter": {
-      "name": "countryOrRegion",
-      "in": "query",
-      "required": false,
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "collectionFormat": "csv",
-      "description": "The country or region where the end users' requests are from. The word 'region' here doesn't mean Azure regions. If it's specified, the continent parameter must not be specified."
-    },
-    "EndpointParameter": {
-      "name": "endpoint",
-      "in": "query",
-      "required": false,
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "collectionFormat": "csv",
-      "description": "The optional endpoint filter. If it's specified, the customDomain parameter must not be specified."
-    },
-    "CustomDomainParameter": {
-      "name": "customDomain",
-      "in": "query",
-      "required": false,
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "collectionFormat": "csv",
-      "description": "The optional custom domain filter. If it's specified, the endpoint parameter must not be specified."
-    },
-    "ApplicationProtocolParameter": {
-      "name": "applicationProtocol",
-      "in": "query",
-      "required": false,
-      "type": "string",
-      "description": "",
-      "enum": [
-        "HTTP",
-        "HTTPS"
-      ]
-    },
-    "NetworkProtocolParameter": {
-      "name": "networkProtocol",
-      "in": "query",
-      "required": false,
-      "type": "string",
-      "description": "",
-      "enum": [
-        "IPv4",
-        "IPv6"
-      ]
-    },
     "ApiVersionParameter": {
       "name": "api-version",
       "in": "query",
       "required": true,
       "type": "string",
       "description": "The API version to be used with the HTTP request."
+    },
+    "MetricsRequestParameter": {
+      "name": "metricsRequest",
+      "in": "body",
+      "required": true,
+      "schema": {
+        "$ref": "#/definitions/MetricsRequest"
+      }
+    },
+    "RankingsRequestParameter": {
+      "name": "rankingsRequest",
+      "in": "body",
+      "required": true,
+      "schema": {
+        "$ref": "#/definitions/RankingsRequest"
+      }
     }
   }
 }
