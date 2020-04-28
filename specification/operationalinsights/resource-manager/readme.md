@@ -142,6 +142,7 @@ directive:
           $.description = 'The Log Analytics Client.';
           return $;
          
+
 python-mode: create
 python:
   azure-arm: true
