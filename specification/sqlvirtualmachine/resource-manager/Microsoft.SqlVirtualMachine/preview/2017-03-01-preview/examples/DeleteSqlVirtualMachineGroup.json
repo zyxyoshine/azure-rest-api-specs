@@ -1,8 +1,8 @@
 {
   "parameters": {
-    "subscriptionId": "00000000-1111-2222-3333-444444444444",
-    "resourceGroupName": "testrg",
-    "sqlVirtualMachineGroupName": "testvmgroup",
+    "subscriptionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "resourceGroupName": "myResourceGroup",
+    "sqlVirtualMachineGroupName": "mySqlVirtualMachineGroup",
     "api-version": "2017-03-01-preview"
   },
   "responses": {

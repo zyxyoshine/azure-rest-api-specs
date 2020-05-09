@@ -1,6 +1,6 @@
 {
   "parameters": {
-    "subscriptionId": "00000000-1111-2222-3333-444444444444",
+    "subscriptionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "api-version": "2017-03-01-preview"
   },
   "responses": {
@@ -25,8 +25,8 @@
             "tags": {
               "mytag": "myval"
             },
-            "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/",
-            "name": "testvmgroup",
+            "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/",
+            "name": "mySqlVirtualMachineGroup",
             "type": "Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups"
           },
           {
@@ -47,8 +47,8 @@
             "tags": {
               "mytag": "myval"
             },
-            "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg1/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/",
-            "name": "testvmgroup1",
+            "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup1/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/",
+            "name": "mySqlVirtualMachineGroup1",
             "type": "Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups"
           },
           {
@@ -69,8 +69,8 @@
             "tags": {
               "mytag": "myval"
             },
-            "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg2/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/",
-            "name": "testvmgroup2",
+            "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup2/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups/",
+            "name": "mySqlVirtualMachineGroup2",
             "type": "Microsoft.SqlVirtualMachine/sqlVirtualMachineGroups"
           }
         ]
