@@ -11,7 +11,7 @@
             "properties": {
               "virtualMachineResourceId": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVirtualMachine",
               "provisioningState": "Succeeded",
-              "sqlImageOffer": "SQL2016-WS2016",
+              "sqlImageOffer": "sql2019-ws2019",
               "sqlImageSku": "Enterprise",
               "sqlServerLicenseType": "PAYG"
             },
@@ -37,7 +37,7 @@
             "properties": {
               "virtualMachineResourceId": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup1/providers/Microsoft.Compute/virtualMachines/myVirtualMachine2",
               "provisioningState": "Succeeded",
-              "sqlImageOffer": "SQL2016-WS2016",
+              "sqlImageOffer": "sql2019-ws2019",
               "sqlImageSku": "Enterprise",
               "sqlServerLicenseType": "PAYG"
             },

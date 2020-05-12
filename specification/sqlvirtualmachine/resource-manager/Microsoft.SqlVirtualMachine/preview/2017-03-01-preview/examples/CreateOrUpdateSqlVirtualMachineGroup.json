@@ -10,7 +10,7 @@
         "mytag": "myval"
       },
       "properties": {
-        "sqlImageOffer": "SQL2016-WS2016",
+        "sqlImageOffer": "sql2019-ws2019",
         "sqlImageSku": "Enterprise",
         "wsfcDomainProfile": {
           "domainFqdn": "testdomain.com",
@@ -29,7 +29,7 @@
       "body": {
         "properties": {
           "provisioningState": "UpdatingDomainful",
-          "sqlImageOffer": "SQL2016-WS2016",
+          "sqlImageOffer": "sql2019-ws2019",
           "sqlImageSku": "Enterprise",
           "wsfcDomainProfile": {
             "storageAccountUrl": "https://storgact.blob.core.windows.net/"
@@ -48,7 +48,7 @@
       "body": {
         "properties": {
           "provisioningState": "ProvisioningDomainful",
-          "sqlImageOffer": "SQL2016-WS2016",
+          "sqlImageOffer": "sql2019-ws2019",
           "sqlImageSku": "Enterprise",
           "wsfcDomainProfile": {
             "storageAccountUrl": "https://storgact.blob.core.windows.net/"

@@ -33,7 +33,7 @@
           {
             "properties": {
               "provisioningState": "Succeeded",
-              "sqlImageOffer": "SQL2016-WS2016",
+              "sqlImageOffer": "sql2019-ws2019",
               "sqlImageSku": "Enterprise",
               "wsfcDomainProfile": {
                 "domainFqdn": "testdomain.com",
@@ -55,7 +55,7 @@
           {
             "properties": {
               "provisioningState": "Succeeded",
-              "sqlImageOffer": "SQL2016-WS2016",
+              "sqlImageOffer": "sql2019-ws2019",
               "sqlImageSku": "Enterprise",
               "wsfcDomainProfile": {
                 "domainFqdn": "testdomain.com",
