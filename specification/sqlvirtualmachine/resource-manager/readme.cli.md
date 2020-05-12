@@ -11,9 +11,10 @@ cli:
     - name: /SqlVirtualMachineGroups/put/Creates or updates a SQL virtual machine group.
     - name: /SqlVirtualMachines/put/Creates or updates a SQL virtual machine for Storage Configuration Settings to EXTEND Data, Log or TempDB storage pool.     
     - name: /SqlVirtualMachines/put/Creates or updates a SQL virtual machine for Storage Configuration Settings to NEW Data, Log and TempDB storage pool.
-    - name: /SqlVirtualMachines/put/Creates or updates a SQL virtual machine and joins it to a SQL virtual machine group.
     - name: /SqlVirtualMachines/put/Creates or updates a SQL virtual machine with max parameters.
     - name: /SqlVirtualMachines/put/Creates or updates a SQL virtual machine with min parameters.
+    - name: /SqlVirtualMachines/put/Creates or updates a SQL virtual machine and joins it to a SQL virtual machine group.
+      disabled: true
     - name: /AvailabilityGroupListeners/put/Creates or updates an availability group listener.
       disabled: true
     - name: /AvailabilityGroupListeners/get/Gets an availability group listener.
