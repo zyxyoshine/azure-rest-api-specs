@@ -4362,11 +4362,6 @@
     "ProtectedItemResourceList": {
       "description": "List of ProtectedItem resources",
       "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ResourceList"
-        }
-      ],
       "properties": {
         "value": {
           "description": "List of resources.",
@@ -4374,6 +4369,11 @@
           "items": {
             "$ref": "#/definitions/ProtectedItemResource"
           }
+        },
+        "nextLink": {
+          "description": "The uri to fetch the next page of resources. Call ListNext() fetches next page of resources.",
+          "type": "string",
+          "readOnly": true
         }
       }
     },
