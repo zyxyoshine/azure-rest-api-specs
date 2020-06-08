@@ -1,0 +1,29 @@
+{
+  "parameters": {
+    "api-version": "2020-03-09-preview",
+    "subscriptionId": "subid",
+    "resourceGroupName": "RG",
+    "profileName": "profile1"
+  },
+  "responses": {
+    "200": {
+      "body": {
+        "endpoints": [
+          {
+            "id": "00000000-0000-0000-0000-000000000000--loganalysistest-1",
+            "name": "loganalysistest-1.azureedge-test.net",
+            "history": false
+          }
+        ],
+        "customDomains": [
+          {
+            "id": "loganalysistest-1.azureedge-test.net",
+            "name": "loganalysistest-1.azureedge-test.net",
+            "endpointId": "00000000-0000-0000-0000-000000000000--loganalysistest-1",
+            "history": false
+          }
+        ]
+      }
+    }
+  }
+}

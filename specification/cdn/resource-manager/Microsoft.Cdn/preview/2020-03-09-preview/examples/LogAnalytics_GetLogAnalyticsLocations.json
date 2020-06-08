@@ -1,0 +1,1055 @@
+{
+  "parameters": {
+    "api-version": "2020-03-09-preview",
+    "subscriptionId": "subid",
+    "resourceGroupName": "RG",
+    "profileName": "profile1"
+  },
+  "responses": {
+    "200": {
+      "body": {
+        "continents": [
+          {
+            "id": "africa"
+          },
+          {
+            "id": "antarctica"
+          },
+          {
+            "id": "asia"
+          },
+          {
+            "id": "europe"
+          },
+          {
+            "id": "northAmerica"
+          },
+          {
+            "id": "oceania"
+          },
+          {
+            "id": "southAmerica"
+          }
+        ],
+        "countryOrRegions": [
+          {
+            "id": "dz",
+            "continentId": "africa"
+          },
+          {
+            "id": "ao",
+            "continentId": "africa"
+          },
+          {
+            "id": "bw",
+            "continentId": "africa"
+          },
+          {
+            "id": "bi",
+            "continentId": "africa"
+          },
+          {
+            "id": "cm",
+            "continentId": "africa"
+          },
+          {
+            "id": "cv",
+            "continentId": "africa"
+          },
+          {
+            "id": "cf",
+            "continentId": "africa"
+          },
+          {
+            "id": "td",
+            "continentId": "africa"
+          },
+          {
+            "id": "km",
+            "continentId": "africa"
+          },
+          {
+            "id": "yt",
+            "continentId": "africa"
+          },
+          {
+            "id": "cg",
+            "continentId": "africa"
+          },
+          {
+            "id": "cd",
+            "continentId": "africa"
+          },
+          {
+            "id": "bj",
+            "continentId": "africa"
+          },
+          {
+            "id": "gq",
+            "continentId": "africa"
+          },
+          {
+            "id": "et",
+            "continentId": "africa"
+          },
+          {
+            "id": "er",
+            "continentId": "africa"
+          },
+          {
+            "id": "dj",
+            "continentId": "africa"
+          },
+          {
+            "id": "ga",
+            "continentId": "africa"
+          },
+          {
+            "id": "gm",
+            "continentId": "africa"
+          },
+          {
+            "id": "gh",
+            "continentId": "africa"
+          },
+          {
+            "id": "gn",
+            "continentId": "africa"
+          },
+          {
+            "id": "ci",
+            "continentId": "africa"
+          },
+          {
+            "id": "ke",
+            "continentId": "africa"
+          },
+          {
+            "id": "ls",
+            "continentId": "africa"
+          },
+          {
+            "id": "lr",
+            "continentId": "africa"
+          },
+          {
+            "id": "ly",
+            "continentId": "africa"
+          },
+          {
+            "id": "mg",
+            "continentId": "africa"
+          },
+          {
+            "id": "mw",
+            "continentId": "africa"
+          },
+          {
+            "id": "ml",
+            "continentId": "africa"
+          },
+          {
+            "id": "mr",
+            "continentId": "africa"
+          },
+          {
+            "id": "mu",
+            "continentId": "africa"
+          },
+          {
+            "id": "ma",
+            "continentId": "africa"
+          },
+          {
+            "id": "mz",
+            "continentId": "africa"
+          },
+          {
+            "id": "na",
+            "continentId": "africa"
+          },
+          {
+            "id": "ne",
+            "continentId": "africa"
+          },
+          {
+            "id": "ng",
+            "continentId": "africa"
+          },
+          {
+            "id": "gw",
+            "continentId": "africa"
+          },
+          {
+            "id": "re",
+            "continentId": "africa"
+          },
+          {
+            "id": "rw",
+            "continentId": "africa"
+          },
+          {
+            "id": "sh",
+            "continentId": "africa"
+          },
+          {
+            "id": "st",
+            "continentId": "africa"
+          },
+          {
+            "id": "sn",
+            "continentId": "africa"
+          },
+          {
+            "id": "sc",
+            "continentId": "africa"
+          },
+          {
+            "id": "sl",
+            "continentId": "africa"
+          },
+          {
+            "id": "so",
+            "continentId": "africa"
+          },
+          {
+            "id": "za",
+            "continentId": "africa"
+          },
+          {
+            "id": "zw",
+            "continentId": "africa"
+          },
+          {
+            "id": "ss",
+            "continentId": "africa"
+          },
+          {
+            "id": "eh",
+            "continentId": "africa"
+          },
+          {
+            "id": "sd",
+            "continentId": "africa"
+          },
+          {
+            "id": "sz",
+            "continentId": "africa"
+          },
+          {
+            "id": "tg",
+            "continentId": "africa"
+          },
+          {
+            "id": "tn",
+            "continentId": "africa"
+          },
+          {
+            "id": "ug",
+            "continentId": "africa"
+          },
+          {
+            "id": "eg",
+            "continentId": "africa"
+          },
+          {
+            "id": "tz",
+            "continentId": "africa"
+          },
+          {
+            "id": "bf",
+            "continentId": "africa"
+          },
+          {
+            "id": "zm",
+            "continentId": "africa"
+          },
+          {
+            "id": "aq",
+            "continentId": "antarctica"
+          },
+          {
+            "id": "bv",
+            "continentId": "antarctica"
+          },
+          {
+            "id": "gs",
+            "continentId": "antarctica"
+          },
+          {
+            "id": "tf",
+            "continentId": "antarctica"
+          },
+          {
+            "id": "hm",
+            "continentId": "antarctica"
+          },
+          {
+            "id": "af",
+            "continentId": "asia"
+          },
+          {
+            "id": "bh",
+            "continentId": "asia"
+          },
+          {
+            "id": "bd",
+            "continentId": "asia"
+          },
+          {
+            "id": "bt",
+            "continentId": "asia"
+          },
+          {
+            "id": "io",
+            "continentId": "asia"
+          },
+          {
+            "id": "bn",
+            "continentId": "asia"
+          },
+          {
+            "id": "mm",
+            "continentId": "asia"
+          },
+          {
+            "id": "kh",
+            "continentId": "asia"
+          },
+          {
+            "id": "lk",
+            "continentId": "asia"
+          },
+          {
+            "id": "cn",
+            "continentId": "asia"
+          },
+          {
+            "id": "tw",
+            "continentId": "asia"
+          },
+          {
+            "id": "cx",
+            "continentId": "asia"
+          },
+          {
+            "id": "cc",
+            "continentId": "asia"
+          },
+          {
+            "id": "cy",
+            "continentId": "asia"
+          },
+          {
+            "id": "ps",
+            "continentId": "asia"
+          },
+          {
+            "id": "hk",
+            "continentId": "asia"
+          },
+          {
+            "id": "in",
+            "continentId": "asia"
+          },
+          {
+            "id": "id",
+            "continentId": "asia"
+          },
+          {
+            "id": "ir",
+            "continentId": "asia"
+          },
+          {
+            "id": "iq",
+            "continentId": "asia"
+          },
+          {
+            "id": "il",
+            "continentId": "asia"
+          },
+          {
+            "id": "jp",
+            "continentId": "asia"
+          },
+          {
+            "id": "kz",
+            "continentId": "asia"
+          },
+          {
+            "id": "jo",
+            "continentId": "asia"
+          },
+          {
+            "id": "kp",
+            "continentId": "asia"
+          },
+          {
+            "id": "kr",
+            "continentId": "asia"
+          },
+          {
+            "id": "kw",
+            "continentId": "asia"
+          },
+          {
+            "id": "kg",
+            "continentId": "asia"
+          },
+          {
+            "id": "la",
+            "continentId": "asia"
+          },
+          {
+            "id": "lb",
+            "continentId": "asia"
+          },
+          {
+            "id": "mo",
+            "continentId": "asia"
+          },
+          {
+            "id": "my",
+            "continentId": "asia"
+          },
+          {
+            "id": "mv",
+            "continentId": "asia"
+          },
+          {
+            "id": "mn",
+            "continentId": "asia"
+          },
+          {
+            "id": "om",
+            "continentId": "asia"
+          },
+          {
+            "id": "np",
+            "continentId": "asia"
+          },
+          {
+            "id": "pk",
+            "continentId": "asia"
+          },
+          {
+            "id": "ph",
+            "continentId": "asia"
+          },
+          {
+            "id": "tl",
+            "continentId": "asia"
+          },
+          {
+            "id": "qa",
+            "continentId": "asia"
+          },
+          {
+            "id": "sa",
+            "continentId": "asia"
+          },
+          {
+            "id": "sg",
+            "continentId": "asia"
+          },
+          {
+            "id": "vn",
+            "continentId": "asia"
+          },
+          {
+            "id": "sy",
+            "continentId": "asia"
+          },
+          {
+            "id": "tj",
+            "continentId": "asia"
+          },
+          {
+            "id": "th",
+            "continentId": "asia"
+          },
+          {
+            "id": "ae",
+            "continentId": "asia"
+          },
+          {
+            "id": "tr",
+            "continentId": "asia"
+          },
+          {
+            "id": "tm",
+            "continentId": "asia"
+          },
+          {
+            "id": "uz",
+            "continentId": "asia"
+          },
+          {
+            "id": "ye",
+            "continentId": "asia"
+          },
+          {
+            "id": "xe",
+            "continentId": "asia"
+          },
+          {
+            "id": "xd",
+            "continentId": "asia"
+          },
+          {
+            "id": "xs",
+            "continentId": "asia"
+          },
+          {
+            "id": "al",
+            "continentId": "europe"
+          },
+          {
+            "id": "ad",
+            "continentId": "europe"
+          },
+          {
+            "id": "az",
+            "continentId": "europe"
+          },
+          {
+            "id": "at",
+            "continentId": "europe"
+          },
+          {
+            "id": "am",
+            "continentId": "europe"
+          },
+          {
+            "id": "be",
+            "continentId": "europe"
+          },
+          {
+            "id": "ba",
+            "continentId": "europe"
+          },
+          {
+            "id": "bg",
+            "continentId": "europe"
+          },
+          {
+            "id": "by",
+            "continentId": "europe"
+          },
+          {
+            "id": "hr",
+            "continentId": "europe"
+          },
+          {
+            "id": "cz",
+            "continentId": "europe"
+          },
+          {
+            "id": "dk",
+            "continentId": "europe"
+          },
+          {
+            "id": "ee",
+            "continentId": "europe"
+          },
+          {
+            "id": "fo",
+            "continentId": "europe"
+          },
+          {
+            "id": "fi",
+            "continentId": "europe"
+          },
+          {
+            "id": "ax",
+            "continentId": "europe"
+          },
+          {
+            "id": "fr",
+            "continentId": "europe"
+          },
+          {
+            "id": "ge",
+            "continentId": "europe"
+          },
+          {
+            "id": "de",
+            "continentId": "europe"
+          },
+          {
+            "id": "gi",
+            "continentId": "europe"
+          },
+          {
+            "id": "gr",
+            "continentId": "europe"
+          },
+          {
+            "id": "va",
+            "continentId": "europe"
+          },
+          {
+            "id": "hu",
+            "continentId": "europe"
+          },
+          {
+            "id": "is",
+            "continentId": "europe"
+          },
+          {
+            "id": "ie",
+            "continentId": "europe"
+          },
+          {
+            "id": "it",
+            "continentId": "europe"
+          },
+          {
+            "id": "lv",
+            "continentId": "europe"
+          },
+          {
+            "id": "li",
+            "continentId": "europe"
+          },
+          {
+            "id": "lt",
+            "continentId": "europe"
+          },
+          {
+            "id": "lu",
+            "continentId": "europe"
+          },
+          {
+            "id": "mt",
+            "continentId": "europe"
+          },
+          {
+            "id": "mc",
+            "continentId": "europe"
+          },
+          {
+            "id": "md",
+            "continentId": "europe"
+          },
+          {
+            "id": "me",
+            "continentId": "europe"
+          },
+          {
+            "id": "nl",
+            "continentId": "europe"
+          },
+          {
+            "id": "no",
+            "continentId": "europe"
+          },
+          {
+            "id": "pl",
+            "continentId": "europe"
+          },
+          {
+            "id": "pt",
+            "continentId": "europe"
+          },
+          {
+            "id": "ro",
+            "continentId": "europe"
+          },
+          {
+            "id": "ru",
+            "continentId": "europe"
+          },
+          {
+            "id": "sm",
+            "continentId": "europe"
+          },
+          {
+            "id": "rs",
+            "continentId": "europe"
+          },
+          {
+            "id": "sk",
+            "continentId": "europe"
+          },
+          {
+            "id": "si",
+            "continentId": "europe"
+          },
+          {
+            "id": "es",
+            "continentId": "europe"
+          },
+          {
+            "id": "sj",
+            "continentId": "europe"
+          },
+          {
+            "id": "se",
+            "continentId": "europe"
+          },
+          {
+            "id": "ch",
+            "continentId": "europe"
+          },
+          {
+            "id": "ua",
+            "continentId": "europe"
+          },
+          {
+            "id": "mk",
+            "continentId": "europe"
+          },
+          {
+            "id": "gb",
+            "continentId": "europe"
+          },
+          {
+            "id": "gg",
+            "continentId": "europe"
+          },
+          {
+            "id": "je",
+            "continentId": "europe"
+          },
+          {
+            "id": "im",
+            "continentId": "europe"
+          },
+          {
+            "id": "ag",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "bs",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "bb",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "bm",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "bz",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "vg",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "ca",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "ky",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "cr",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "cu",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "dm",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "do",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "sv",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "gl",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "gd",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "gp",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "gt",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "ht",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "hn",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "jm",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "mq",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "mx",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "ms",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "an",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "cw",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "aw",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "sx",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "bq",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "ni",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "um",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "pa",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "pr",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "bl",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "kn",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "ai",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "lc",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "mf",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "pm",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "vc",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "tt",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "tc",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "us",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "vi",
+            "continentId": "northAmerica"
+          },
+          {
+            "id": "as",
+            "continentId": "oceania"
+          },
+          {
+            "id": "au",
+            "continentId": "oceania"
+          },
+          {
+            "id": "sb",
+            "continentId": "oceania"
+          },
+          {
+            "id": "ck",
+            "continentId": "oceania"
+          },
+          {
+            "id": "fj",
+            "continentId": "oceania"
+          },
+          {
+            "id": "pf",
+            "continentId": "oceania"
+          },
+          {
+            "id": "ki",
+            "continentId": "oceania"
+          },
+          {
+            "id": "gu",
+            "continentId": "oceania"
+          },
+          {
+            "id": "nr",
+            "continentId": "oceania"
+          },
+          {
+            "id": "nc",
+            "continentId": "oceania"
+          },
+          {
+            "id": "vu",
+            "continentId": "oceania"
+          },
+          {
+            "id": "nz",
+            "continentId": "oceania"
+          },
+          {
+            "id": "nu",
+            "continentId": "oceania"
+          },
+          {
+            "id": "nf",
+            "continentId": "oceania"
+          },
+          {
+            "id": "mp",
+            "continentId": "oceania"
+          },
+          {
+            "id": "fm",
+            "continentId": "oceania"
+          },
+          {
+            "id": "mh",
+            "continentId": "oceania"
+          },
+          {
+            "id": "pw",
+            "continentId": "oceania"
+          },
+          {
+            "id": "pg",
+            "continentId": "oceania"
+          },
+          {
+            "id": "pn",
+            "continentId": "oceania"
+          },
+          {
+            "id": "tk",
+            "continentId": "oceania"
+          },
+          {
+            "id": "to",
+            "continentId": "oceania"
+          },
+          {
+            "id": "tv",
+            "continentId": "oceania"
+          },
+          {
+            "id": "wf",
+            "continentId": "oceania"
+          },
+          {
+            "id": "ws",
+            "continentId": "oceania"
+          },
+          {
+            "id": "xx",
+            "continentId": "oceania"
+          },
+          {
+            "id": "ar",
+            "continentId": "southAmerica"
+          },
+          {
+            "id": "bo",
+            "continentId": "southAmerica"
+          },
+          {
+            "id": "br",
+            "continentId": "southAmerica"
+          },
+          {
+            "id": "cl",
+            "continentId": "southAmerica"
+          },
+          {
+            "id": "co",
+            "continentId": "southAmerica"
+          },
+          {
+            "id": "ec",
+            "continentId": "southAmerica"
+          },
+          {
+            "id": "fk",
+            "continentId": "southAmerica"
+          },
+          {
+            "id": "gf",
+            "continentId": "southAmerica"
+          },
+          {
+            "id": "gy",
+            "continentId": "southAmerica"
+          },
+          {
+            "id": "py",
+            "continentId": "southAmerica"
+          },
+          {
+            "id": "pe",
+            "continentId": "southAmerica"
+          },
+          {
+            "id": "sr",
+            "continentId": "southAmerica"
+          },
+          {
+            "id": "uy",
+            "continentId": "southAmerica"
+          },
+          {
+            "id": "ve",
+            "continentId": "southAmerica"
+          }
+        ]
+      }
+    }
+  }
+}

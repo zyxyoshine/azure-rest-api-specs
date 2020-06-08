@@ -1,0 +1,933 @@
+{
+  "parameters": {
+    "api-version": "2020-03-09-preview",
+    "subscriptionId": "subid",
+    "resourceGroupName": "RG",
+    "profileName": "profile1"
+  },
+  "responses": {
+    "200": {
+      "body": {
+        "dateTimeBegin": "2020-04-15T08:00:00Z",
+        "dateTimeEnd": "2020-04-22T08:00:00Z",
+        "tables": [
+          {
+            "ranking": "url",
+            "data": [
+              {
+                "name": "https://cdn.contoso.com/1",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 63477841,
+                    "percentage": 99.97095105688544
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 828159704909,
+                    "percentage": 99.98187310694388
+                  }
+                ]
+              },
+              {
+                "name": "https://cdn.contoso.com/2",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 6955,
+                    "percentage": 0.01095339654983915
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 3993180,
+                    "percentage": 0.0004820877104821903
+                  }
+                ]
+              },
+              {
+                "name": "https://cdn.contoso.com/3",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 6353,
+                    "percentage": 0.010005309601887582
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 99103857,
+                    "percentage": 0.011964587501961943
+                  }
+                ]
+              },
+              {
+                "name": "https://cdn.contoso.com/4",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 2256,
+                    "percentage": 0.0035529637119248204
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 1410003,
+                    "percentage": 0.00017022651572005763
+                  }
+                ]
+              },
+              {
+                "name": "https://cdn.contoso.com/5",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 1036,
+                    "percentage": 0.0016315914918236321
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 20307244,
+                    "percentage": 0.0024516482518101355
+                  }
+                ]
+              },
+              {
+                "name": "https://cdn.contoso.com/6",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 716,
+                    "percentage": 0.0011276250078626645
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 15926440,
+                    "percentage": 0.0019227635608041651
+                  }
+                ]
+              },
+              {
+                "name": "https://cdn.contoso.com/7",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 414,
+                    "percentage": 0.0006520066386245016
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 296331,
+                    "percentage": 0.000035775380357233565
+                  }
+                ]
+              },
+              {
+                "name": "https://cdn.contoso.com/8",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 379,
+                    "percentage": 0.0005968853044412707
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 4773385,
+                    "percentage": 0.0005762801190780356
+                  }
+                ]
+              },
+              {
+                "name": "http://cdn.contoso.com/9",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 121,
+                    "percentage": 0.0001905623267477408
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 75625,
+                    "percentage": 0.000009130037490224745
+                  }
+                ]
+              },
+              {
+                "name": "https://cdn.contoso.com/10",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 109,
+                    "percentage": 0.00017166358359920454
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 3186223,
+                    "percentage": 0.0003846655926243485
+                  }
+                ]
+              },
+              {
+                "name": "http://cdn.contoso.com/11",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 20,
+                    "percentage": 0.000031497905247560465
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 12924,
+                    "percentage": 0.0000015602856796517634
+                  }
+                ]
+              },
+              {
+                "name": "http://cdn.contoso.com/12",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 19,
+                    "percentage": 0.00002992300998518244
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 1017442,
+                    "percentage": 0.0001228335022033619
+                  }
+                ]
+              },
+              {
+                "name": "https://cdn.contoso.com/13",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 9,
+                    "percentage": 0.000014174057361402209
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 6569,
+                    "percentage": 7.930607110517203e-7
+                  }
+                ]
+              },
+              {
+                "name": "http://cdn-contoso-com.azureedge.net/",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 8,
+                    "percentage": 0.000012599162099024185
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 5064,
+                    "percentage": 6.113654195107187e-7
+                  }
+                ]
+              },
+              {
+                "name": "http://cdn.contoso.com/14",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 6,
+                    "percentage": 0.00000944937157426814
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 3753,
+                    "percentage": 4.5309131505207886e-7
+                  }
+                ]
+              },
+              {
+                "name": "https://cdn.contoso.com/15",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 4,
+                    "percentage": 0.000006299581049512092
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 2500,
+                    "percentage": 3.0181942116445436e-7
+                  }
+                ]
+              },
+              {
+                "name": "https://cdn.contoso.com/16",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 4,
+                    "percentage": 0.000006299581049512092
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 3166,
+                    "percentage": 3.8222411496266495e-7
+                  }
+                ]
+              },
+              {
+                "name": "http://cdn.contoso.com/17",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 4,
+                    "percentage": 0.000006299581049512092
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 2500,
+                    "percentage": 3.0181942116445436e-7
+                  }
+                ]
+              },
+              {
+                "name": "http://cdn.contoso.com/18",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 4,
+                    "percentage": 0.000006299581049512092
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 2641,
+                    "percentage": 3.188420365181296e-7
+                  }
+                ]
+              },
+              {
+                "name": "https://cdn.contoso.com/19",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 2,
+                    "percentage": 0.000003149790524756046
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 1250,
+                    "percentage": 1.5090971058222718e-7
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ranking": "referrer",
+            "data": [
+              {
+                "name": "https://www.contoso.com/1",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 1110563,
+                    "percentage": 3.70073227688891
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 12653796856,
+                    "percentage": 3.245505781943941
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/2",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 810535,
+                    "percentage": 2.700948110146072
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 9127850598,
+                    "percentage": 2.34115437679739
+                  }
+                ]
+              },
+              {
+                "name": "",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 795646,
+                    "percentage": 2.6513334526519916
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 13058395703,
+                    "percentage": 3.3492792115516488
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/4",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 742653,
+                    "percentage": 2.474744726439094
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 6614638762,
+                    "percentage": 1.6965538953916577
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/5",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 395828,
+                    "percentage": 1.319018782091951
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 5326113997,
+                    "percentage": 1.3660669575519264
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/6",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 343974,
+                    "percentage": 1.1462255488527764
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 4790502247,
+                    "percentage": 1.2286907177336102
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/7",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 319696,
+                    "percentage": 1.0653238996727579
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 4349249882,
+                    "percentage": 1.1155162201341098
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/8",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 307466,
+                    "percentage": 1.0245698355211956
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 5059239044,
+                    "percentage": 1.2976176049288186
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/9",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 284209,
+                    "percentage": 0.9470704675757433
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 3525825579,
+                    "percentage": 0.9043204528247519
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/10",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 252024,
+                    "percentage": 0.8398202995693632
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 2976059920,
+                    "percentage": 0.7633139513530073
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/11",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 235890,
+                    "percentage": 0.7860569249968934
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 2999478146,
+                    "percentage": 0.7693203689327104
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/12",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 226858,
+                    "percentage": 0.755959565437048
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 3638319075,
+                    "percentage": 0.933173317767496
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/13",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 155579,
+                    "percentage": 0.5184363488663856
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 1643953723,
+                    "percentage": 0.4216490413084886
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/14",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 149802,
+                    "percentage": 0.4991856351620867
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 2433788894,
+                    "percentage": 0.6242297088689684
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/15",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 147963,
+                    "percentage": 0.49305753017641846
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 2387370720,
+                    "percentage": 0.6123241556331548
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/16",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 136946,
+                    "percentage": 0.4563455494112704
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 1946990014,
+                    "percentage": 0.49937322526462674
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/17",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 133611,
+                    "percentage": 0.44523231932578716
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 2668891745,
+                    "percentage": 0.6845300022082126
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/18",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 130815,
+                    "percentage": 0.435915200489502
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 1008945017,
+                    "percentage": 0.2587789991890342
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/19",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 120824,
+                    "percentage": 0.4026221624732912
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 1608088297,
+                    "percentage": 0.4124501068874979
+                  }
+                ]
+              },
+              {
+                "name": "https://www.contoso.com/20",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 120018,
+                    "percentage": 0.39993632635667964
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 1711006297,
+                    "percentage": 0.4388470032394198
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ranking": "countryOrRegion",
+            "data": [
+              {
+                "name": "fr",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 30909476,
+                    "percentage": 82.27540085116422
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 387312073097,
+                    "percentage": 79.34109467868386
+                  }
+                ]
+              },
+              {
+                "name": "nl",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 1893797,
+                    "percentage": 5.040943020377708
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 23802810463,
+                    "percentage": 4.876019028951561
+                  }
+                ]
+              },
+              {
+                "name": "be",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 1411735,
+                    "percentage": 3.757781691951631
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 19565271809,
+                    "percentage": 4.007956866924935
+                  }
+                ]
+              },
+              {
+                "name": "de",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 452471,
+                    "percentage": 1.204395470778189
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 8435150608,
+                    "percentage": 1.7279453172395043
+                  }
+                ]
+              },
+              {
+                "name": "it",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 368780,
+                    "percentage": 0.9816252571183136
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 7332796565,
+                    "percentage": 1.5021274753226876
+                  }
+                ]
+              },
+              {
+                "name": "ch",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 331273,
+                    "percentage": 0.8817884478587643
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 5210566200,
+                    "percentage": 1.0673873987403781
+                  }
+                ]
+              },
+              {
+                "name": "ma",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 263136,
+                    "percentage": 0.7004201520068458
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 4147914663,
+                    "percentage": 0.8497026373710869
+                  }
+                ]
+              },
+              {
+                "name": "pl",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 247374,
+                    "percentage": 0.6584645760463846
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 4234079548,
+                    "percentage": 0.8673535622289101
+                  }
+                ]
+              },
+              {
+                "name": "ro",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 233585,
+                    "percentage": 0.6217607670805936
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 3464920375,
+                    "percentage": 0.7097908756852155
+                  }
+                ]
+              },
+              {
+                "name": "us",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 182227,
+                    "percentage": 0.48505511613671826
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 2902102832,
+                    "percentage": 0.5944973873905612
+                  }
+                ]
+              },
+              {
+                "name": "re",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 156519,
+                    "percentage": 0.41662509794159486
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 2057061771,
+                    "percentage": 0.42139025367261723
+                  }
+                ]
+              },
+              {
+                "name": "dz",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 149233,
+                    "percentage": 0.397231091695692
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 2356209382,
+                    "percentage": 0.48267080900740766
+                  }
+                ]
+              },
+              {
+                "name": "ci",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 78534,
+                    "percentage": 0.2090432180230209
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 1279155344,
+                    "percentage": 0.2620356872573682
+                  }
+                ]
+              },
+              {
+                "name": "mx",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 72125,
+                    "percentage": 0.191983626198976
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 1617333678,
+                    "percentage": 0.33131170801661214
+                  }
+                ]
+              },
+              {
+                "name": "es",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 70070,
+                    "percentage": 0.1865135901249532
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 1388428091,
+                    "percentage": 0.28442027056302616
+                  }
+                ]
+              },
+              {
+                "name": "tn",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 59599,
+                    "percentage": 0.15864169341882525
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 962707648,
+                    "percentage": 0.19721119983970026
+                  }
+                ]
+              },
+              {
+                "name": "hu",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 58088,
+                    "percentage": 0.15461968635904497
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 1144792109,
+                    "percentage": 0.23451130345950147
+                  }
+                ]
+              },
+              {
+                "name": "lt",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 57114,
+                    "percentage": 0.152027075587221
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 732763507,
+                    "percentage": 0.15010701401866977
+                  }
+                ]
+              },
+              {
+                "name": "lu",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 50444,
+                    "percentage": 0.1342727492545046
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 756645428,
+                    "percentage": 0.15499923888534803
+                  }
+                ]
+              },
+              {
+                "name": "ua",
+                "metrics": [
+                  {
+                    "metric": "clientRequestCount",
+                    "value": 46672,
+                    "percentage": 0.1242323716042788
+                  },
+                  {
+                    "metric": "clientRequestTraffic",
+                    "value": 929494709,
+                    "percentage": 0.19040751071974765
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

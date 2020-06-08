@@ -34,8 +34,8 @@
         "tags": ["LogAnalytics"],
         "operationId": "LogAnalytics_GetLogAnalyticsMetrics",
         "x-ms-examples": {
-          "LogAnalytics_Metrics_Get": {
-            "$ref": "./examples/LogAnalytics_Metrics_Get.json"
+          "LogAnalytics_GetLogAnalyticsMetrics": {
+            "$ref": "./examples/LogAnalytics_GetLogAnalyticsMetrics.json"
           }
         },
         "description": "This is a sample get operation, please see guidelines in azure-rest-api-specs repository for more info",
@@ -64,7 +64,7 @@
             }
           },
           "default": {
-            "description": "Error response describing why the operation failed.",
+            "description": "CDN Error response describing why the operation failed.",
             "schema": {
               "$ref": "#/definitions/ErrorResponse"
             }
@@ -77,8 +77,8 @@
         "tags": ["LogAnalytics"],
         "operationId": "LogAnalytics_GetLogAnalyticsRankings",
         "x-ms-examples": {
-          "LogAnalytics_Rankings_Get": {
-            "$ref": "./examples/LogAnalytics_Rankings_Get.json"
+          "LogAnalytics_GetLogAnalyticsRankings": {
+            "$ref": "./examples/LogAnalytics_GetLogAnalyticsRankings.json"
           }
         },
         "description": "This is a sample get operation, please see guidelines in azure-rest-api-specs repository for more info",
@@ -107,7 +107,7 @@
             }
           },
           "default": {
-            "description": "Error response describing why the operation failed.",
+            "description": "CDN Error response describing why the operation failed.",
             "schema": {
               "$ref": "#/definitions/ErrorResponse"
             }
@@ -118,10 +118,10 @@
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/getLogAnalyticsLocations": {
       "post": {
         "tags": ["LogAnalytics"],
-        "operationId": "LogAnalytics_Continents_Get",
+        "operationId": "LogAnalytics_GetLogAnalyticsLocations",
         "x-ms-examples": {
-          "LogAnalytics_Continents_Get": {
-            "$ref": "./examples/LogAnalytics_Continents_Get.json"
+          "LogAnalytics_GetLogAnalyticsLocations": {
+            "$ref": "./examples/LogAnalytics_GetLogAnalyticsLocations.json"
           }
         },
         "description": "This is a sample get operation, please see guidelines in azure-rest-api-specs repository for more info",
@@ -147,7 +147,7 @@
             }
           },
           "default": {
-            "description": "Error response describing why the operation failed.",
+            "description": "CDN Error response describing why the operation failed.",
             "schema": {
               "$ref": "#/definitions/ErrorResponse"
             }
@@ -158,10 +158,10 @@
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/getLogAnalyticsResources": {
       "post": {
         "tags": ["LogAnalytics"],
-        "operationId": "LogAnalytics_Continents_Get",
+        "operationId": "LogAnalytics_GetLogAnalyticsResources",
         "x-ms-examples": {
-          "LogAnalytics_Continents_Get": {
-            "$ref": "./examples/LogAnalytics_Continents_Get.json"
+          "LogAnalytics_GetLogAnalyticsResources": {
+            "$ref": "./examples/LogAnalytics_GetLogAnalyticsResources.json"
           }
         },
         "description": "This is a sample get operation, please see guidelines in azure-rest-api-specs repository for more info",
@@ -187,7 +187,7 @@
             }
           },
           "default": {
-            "description": "Error response describing why the operation failed.",
+            "description": "CDN Error response describing why the operation failed.",
             "schema": {
               "$ref": "#/definitions/ErrorResponse"
             }
@@ -350,10 +350,11 @@
     "RankingsRequest": {
       "type": "object",
       "required": [
+        "rankings",
         "metrics",
+        "maxRanking",
         "dateTimeBegin",
-        "dateTimeEnd",
-        "granularity"
+        "dateTimeEnd"
       ],
       "properties": {
         "rankings": {
