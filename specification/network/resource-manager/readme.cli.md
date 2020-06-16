@@ -199,10 +199,15 @@ cli:
     - name: /PublicIPPrefixes/patch/Update public IP prefix tags
     - name: /PublicIPPrefixes/delete/Delete public IP prefix
     - split: firewallpolicies
+    - name: /IpGroups/put/CreateOrUpdate_IpGroups
     - name: /FirewallPolicies/put/Create FirewallPolicy
     - name: /FirewallPolicyRuleGroups/put/Create FirewallPolicyRuleGroup
     - name: /FirewallPolicyRuleGroups/put/Create FirewallPolicyRuleGroup With IpGroups
+      disabled: true
+      comment: Need to construct test with two IP Groups
     - name: /FirewallPolicyRuleGroups/get/Get FirewallPolicyRuleGroup With IpGroups
+      disabled: true
+      comment: Need to construct test with two IP Groups
     - name: /FirewallPolicyRuleGroups/get/Get FirewallPolicyRuleGroup
     - name: /FirewallPolicyRuleGroups/get/List all FirewallPolicyRuleGroups for a given FirewallPolicy
     - name: /FirewallPolicyRuleGroups/get/List all FirewallPolicyRuleGroups with IpGroups for a given FirewallPolicy
@@ -212,11 +217,25 @@ cli:
     - name: /FirewallPolicyRuleGroups/delete/Delete FirewallPolicyRuleGroup
     - name: /FirewallPolicies/delete/Delete Firewall Policy
     - split: virtualrouters
+    - name: /PublicIPAddresses/put/Create public IP address defaults
+    - name: /VirtualNetworks/put/Create virtual network
+    - name: /Subnets/put/Create subnet
+    - name: /VirtualNetworkGateways/put/UpdateVirtualNetworkGateway
     - name: /VirtualRouters/put/Create VirtualRouter
+      disabled: true
+      comment: This feature is not enabled
     - name: /VirtualRouters/get/Get VirtualRouter
+      disabled: true
+      comment: This feature is not enabled
     - name: /VirtualRouters/get/List all Virtual Router for a given resource group
+      disabled: true
+      comment: This feature is not enabled
     - name: /VirtualRouters/get/List all Virtual Routers for a given subscription
+      disabled: true
+      comment: This feature is not enabled
     - name: /VirtualRouters/delete/Delete VirtualRouter
+      disabled: true
+      comment: This feature is not enabled
     - split: azurefirewalls
     - name: /VirtualNetworks/put/Create virtual network
     - name: /Subnets/put/Create subnet
@@ -455,9 +474,17 @@ cli:
     - name: /ServiceEndpointPolicyDefinitions/delete/Delete service endpoint policy definitions from service endpoint policy
     - split: ddoscustompolicies
     - name: /DdosCustomPolicies/put/Create DDoS custom policy
+      disabled: true
+      comment: No region enabled
     - name: /DdosCustomPolicies/get/Get DDoS custom policy
+      disabled: true
+      comment: No region enabled
     - name: /DdosCustomPolicies/patch/DDoS Custom policy Update tags
+      disabled: true
+      comment: No region enabled
     - name: /DdosCustomPolicies/delete/Delete DDoS custom policy
+      disabled: true
+      comment: No region enabled
     - split: ddosprotectionplans
     - name: /DdosProtectionPlans/put/Create DDoS protection plan
     - name: /DdosProtectionPlans/get/Get DDoS protection plan
@@ -512,6 +539,8 @@ cli:
     - name: /NetworkVirtualAppliances/patch/Update NetworkVirtualAppliance
     - name: /NetworkVirtualAppliances/delete/Delete NetworkVirtualAppliance
     - split: securitypartnerproviders
+    - name: /VirtualWans/put/VirtualWANCreate
+    - name: /VirtualHubs/put/VirtualHubPut
     - name: /SecurityPartnerProviders/put/Create Security Partner Provider
     - name: /SecurityPartnerProviders/get/Get Security Partner Provider
     - name: /SecurityPartnerProviders/get/List all Security Partner Providers for a given resource group
@@ -555,10 +584,25 @@ cli:
     - name: /ExpressRouteCircuitPeerings/get/List ExpressRouteCircuit Peerings
     - name: /ExpressRouteCircuitPeerings/delete/Delete ExpressRouteCircuit Peerings
     - split: virtualrouterpeerings
+    - name: /PublicIPAddresses/put/Create public IP address defaults
+    - name: /VirtualNetworks/put/Create virtual network
+    - name: /Subnets/put/Create subnet
+    - name: /VirtualNetworkGateways/put/UpdateVirtualNetworkGateway
+    - name: /VirtualRouters/put/Create VirtualRouter
+      disabled: true
+      comment: This feature is not enabled
     - name: /VirtualRouterPeerings/put/Create Virtual Router Peering
+      disabled: true
+      comment: This feature is not enabled
     - name: /VirtualRouterPeerings/get/Get Virtual Router Peering
+      disabled: true
+      comment: This feature is not enabled
     - name: /VirtualRouterPeerings/get/List all Virtual Router Peerings for a given Virtual Router
+      disabled: true
+      comment: This feature is not enabled
     - name: /VirtualRouterPeerings/delete/Delete VirtualRouterPeering
+      disabled: true
+      comment: This feature is not enabled
     - split: connectionmonitors
     - name: /ConnectionMonitors/put/Create connection monitor V2
     - name: /ConnectionMonitors/put/Create connection monitor V1
@@ -614,6 +658,7 @@ cli:
     - name: /ExpressRouteConnections/get/ExpressRouteConnectionList
     - name: /ExpressRouteConnections/delete/ExpressRouteConnectionDelete
     - split: virtualnetworkpeerings
+    - name: /VirtualNetworks/put/Create virtual network
     - name: /VirtualNetworkPeerings/put/Create peering
     - name: /VirtualNetworkPeerings/get/Get peering
     - name: /VirtualNetworkPeerings/get/List peerings
