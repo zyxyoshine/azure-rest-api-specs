@@ -9,12 +9,20 @@
     }
   },
   "host": "management.azure.com",
-  "schemes": ["https"],
-  "consumes": ["application/json"],
-  "produces": ["application/json"],
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
   "security": [
     {
-      "azure_auth": ["user_impersonation"]
+      "azure_auth": [
+        "user_impersonation"
+      ]
     }
   ],
   "securityDefinitions": {
@@ -31,7 +39,9 @@
   "paths": {
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/getLogAnalyticsMetrics": {
       "post": {
-        "tags": ["LogAnalytics"],
+        "tags": [
+          "LogAnalytics"
+        ],
         "operationId": "LogAnalytics_GetLogAnalyticsMetrics",
         "x-ms-examples": {
           "LogAnalytics_GetLogAnalyticsMetrics": {
@@ -74,7 +84,9 @@
     },
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/getLogAnalyticsRankings": {
       "post": {
-        "tags": ["LogAnalytics"],
+        "tags": [
+          "LogAnalytics"
+        ],
         "operationId": "LogAnalytics_GetLogAnalyticsRankings",
         "x-ms-examples": {
           "LogAnalytics_GetLogAnalyticsRankings": {
@@ -117,7 +129,9 @@
     },
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/getLogAnalyticsLocations": {
       "post": {
-        "tags": ["LogAnalytics"],
+        "tags": [
+          "LogAnalytics"
+        ],
         "operationId": "LogAnalytics_GetLogAnalyticsLocations",
         "x-ms-examples": {
           "LogAnalytics_GetLogAnalyticsLocations": {
@@ -157,7 +171,9 @@
     },
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/getLogAnalyticsResources": {
       "post": {
-        "tags": ["LogAnalytics"],
+        "tags": [
+          "LogAnalytics"
+        ],
         "operationId": "LogAnalytics_GetLogAnalyticsResources",
         "x-ms-examples": {
           "LogAnalytics_GetLogAnalyticsResources": {
@@ -184,6 +200,96 @@
             "description": "Describe the result of a successful operation.",
             "schema": {
               "$ref": "#/definitions/ResourcesResponse"
+            }
+          },
+          "default": {
+            "description": "CDN Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/getWafLogAnalyticsMetrics": {
+      "post": {
+        "tags": [
+          "WafLogAnalytics"
+        ],
+        "operationId": "LogAnalytics_GetLogAnalyticsMetrics",
+        "x-ms-examples": {
+          "LogAnalytics_GetLogAnalyticsMetrics": {
+            "$ref": "./examples/LogAnalytics_GetLogAnalyticsMetrics.json"
+          }
+        },
+        "description": "This is a sample get operation, please see guidelines in azure-rest-api-specs repository for more info",
+        "parameters": [
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ProfileNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          },
+          {
+            "$ref": "#/parameters/WafMetricsRequestParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Describe the result of a successful operation.",
+            "schema": {
+              "$ref": "#/definitions/WafMetricsResponse"
+            }
+          },
+          "default": {
+            "description": "CDN Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/getWafLogAnalyticsRankings": {
+      "post": {
+        "tags": [
+          "WafLogAnalytics"
+        ],
+        "operationId": "LogAnalytics_GetLogAnalyticsRankings",
+        "x-ms-examples": {
+          "LogAnalytics_GetLogAnalyticsRankings": {
+            "$ref": "./examples/LogAnalytics_GetLogAnalyticsRankings.json"
+          }
+        },
+        "description": "This is a sample get operation, please see guidelines in azure-rest-api-specs repository for more info",
+        "parameters": [
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ProfileNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          },
+          {
+            "$ref": "#/parameters/WafRankingsRequestParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Describe the result of a successful operation.",
+            "schema": {
+              "$ref": "#/definitions/WafRankingsResponse"
             }
           },
           "default": {
@@ -455,7 +561,8 @@
               }
             }
           }
-        }}
+        }
+      }
     },
     "ContinentsResponse": {
       "description": "",
@@ -529,6 +636,245 @@
         }
       }
     },
+    "WafMetricsRequest": {
+      "type": "object",
+      "required": [
+        "metrics",
+        "dateTimeBegin",
+        "dateTimeEnd",
+        "granularity"
+      ],
+      "properties": {
+        "metrics": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "requestCount"
+            ]
+          }
+        },
+        "dateTimeBegin": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dateTimeEnd": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "granularity": {
+          "type": "string",
+          "enum": [
+            "PT5M",
+            "PT1H",
+            "P1D"
+          ]
+        },
+        "endpoints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "allow",
+              "block",
+              "log",
+              "redirect"
+            ]
+          }
+        },
+        "ruleTypes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "managed",
+              "custom"
+            ]
+          }
+        }
+      }
+    },
+    "WafMetricsResponse": {
+      "description": "",
+      "properties": {
+        "dateTimeBegin": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dateTimeEnd": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "granularity": {
+          "type": "string",
+          "enum": [
+            "PT5M",
+            "PT1H",
+            "P1D"
+          ]
+        },
+        "series": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metric": {
+                "type": "string"
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "count"
+                ]
+              },
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "dateTime": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "value": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "WafRankingsRequest": {
+      "type": "object",
+      "required": [
+        "groupBy",
+        "metrics",
+        "maxRanking",
+        "dateTimeBegin",
+        "dateTimeEnd"
+      ],
+      "properties": {
+        "groupBy": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "action",
+              "ruleGroup",
+              "ruleId",
+              "countryOrRegions",
+              "ipAddress",
+              "url",
+              "userAgent"
+            ]
+          }
+        },
+        "metrics": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "requestCount"
+            ]
+          }
+        },
+        "maxRanking": {
+          "type": "number"
+        },
+        "dateTimeBegin": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dateTimeEnd": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "endpoints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "allow",
+              "block",
+              "log",
+              "redirect"
+            ]
+          }
+        },
+        "ruleTypes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "managed",
+              "custom"
+            ]
+          }
+        }
+      }
+    },
+    "WafRankingsResponse": {
+      "description": "",
+      "properties": {
+        "dateTimeBegin": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dateTimeEnd": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "groupValues": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "metrics": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "metric": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "ErrorResponse": {
       "description": "Error response indicates CDN service is not able to process the incoming request. The reason is provided in the error message.",
       "type": "object",
@@ -590,6 +936,22 @@
       "required": true,
       "schema": {
         "$ref": "#/definitions/RankingsRequest"
+      }
+    },
+    "WafMetricsRequestParameter": {
+      "name": "wafMetricsRequest",
+      "in": "body",
+      "required": true,
+      "schema": {
+        "$ref": "#/definitions/WafMetricsRequest"
+      }
+    },
+    "WafRankingsRequestParameter": {
+      "name": "wafRankingsRequest",
+      "in": "body",
+      "required": true,
+      "schema": {
+        "$ref": "#/definitions/WafRankingsRequest"
       }
     }
   }
