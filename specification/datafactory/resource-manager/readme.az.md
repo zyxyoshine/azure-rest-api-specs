@@ -7,6 +7,7 @@ az:
   extensions: datafactory
   namespace: azure.mgmt.datafactory
   package-name: azure-mgmt-datafactory
+  randomize-names: true
 az-output-folder:  $(azure-cli-extension-folder)/src/datafactory
 python-sdk-output-folder: "$(az-output-folder)/azext_datafactory/vendored_sdks/datafactory"
 
@@ -96,4 +97,14 @@ cli:
             group: Triggers
             op: CreateOrUpdate#Update
         hidden: true
+      - where:
+            group: ManagedPrivateEndpoints
+            param: managedVirtualNetworkName
+        alias:
+            - managed_vnet_name
+      - where:
+            group: ManagedPrivateEndpoints
+            param: privateLinkResourceId
+        alias:
+            - plr_id
 ```
