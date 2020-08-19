@@ -51,7 +51,7 @@
         "description": "Lists all the Global Policy definitions of the Api Management service.",
         "x-ms-examples": {
           "ApiManagementListPolicies": {
-            "$ref": "./examples/ApiManagementListPolicies.json"
+            "$ref": "./examples/ApiManagementListPolicies1.json"
           }
         },
         "parameters": [
