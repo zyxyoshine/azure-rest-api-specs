@@ -12,8 +12,18 @@ This is the AutoRest configuration file for Azure Migrate.
 batch:
   - tag: package-2018-02
   - tag: package-2020-01
+  - tag: package-2020-07
 ```
 
+
+### Tag: package-2020-07
+
+These settings apply only when `--tag=package-2020-07` is specified on the command line.
+
+```yaml $(tag) == 'package-2020-07'
+input-file:
+  - Microsoft.OffAzure/stable/2020-07-07/migrate.json
+```
 ### Tag: package-2018-02 and java
 
 These settings apply only when `--tag=package-2018-02 --java` is specified on the command line.
@@ -41,6 +51,7 @@ generate-interface: true
 ```
 
 ## Getting Started
+
 To build the SDK for Migrate, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -48,11 +59,10 @@ To build the SDK for Migrate, simply [Install AutoRest](https://aka.ms/autorest/
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
-
-
 
 ### Basic Information
 These are the global settings for the API.
@@ -69,6 +79,7 @@ tag: package-migrate-2019-10
 tag: package-offazure-2020-01
 ```
 
+These are the global settings for the API.
 
 ### Tag: package-migrate-2018-02
 
@@ -123,12 +134,20 @@ swagger-to-sdk:
   - repo: azure-sdk-for-go
   - repo: azure-sdk-for-js
   - repo: azure-sdk-for-node
+  - repo: azure-resource-manager-schemas
+    after_scripts:
+      - node sdkauto_afterscript.js migrate/resource-manager
 ```
 
 ## Go
 
 See configuration in [readme.go.md](./readme.go.md)
-## Multi-API/Profile support for AutoRest v3 generators 
+
+## AzureResourceSchema
+
+See configuration in [readme.azureresourceschema.md](./readme.azureresourceschema.md)
+
+## Multi-API/Profile support for AutoRest v3 generators
 
 AutoRest V3 generators require the use of `--tag=all-api-versions` to select api files.
 
@@ -143,14 +162,14 @@ input-file:
   - $(this-folder)/Microsoft.Migrate/stable/2018-02-02/migrate.json
   - $(this-folder)/Microsoft.Migrate/stable/2019-10-01/migrate.json
   - $(this-folder)/Microsoft.OffAzure/stable/2020-01-01/migrate.json
+  - $(this-folder)/Microsoft.OffAzure/stable/2020-07-07/migrate.json
 
 ```
 
-If there are files that should not be in the `all-api-versions` set, 
+If there are files that should not be in the `all-api-versions` set,
 uncomment the  `exclude-file` section below and add the file paths.
 
 ``` yaml $(tag) == 'all-api-versions'
 #exclude-file: 
 #  - $(this-folder)/Microsoft.Example/stable/2010-01-01/somefile.json
 ```
-
