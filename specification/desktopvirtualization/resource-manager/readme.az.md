@@ -20,4 +20,13 @@ directive:
       group: desktopvirtualization application-group
     set:
       group: desktopvirtualization applicationgroup
+
+cli:
+    cli-directive:
+      - where:
+          group: HostPools
+          param: preferredAppGroupType
+        alias:
+          - pa
+          - preferred-app-group-type
 ```
