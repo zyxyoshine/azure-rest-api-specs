@@ -47,6 +47,7 @@ cli:
     # directive on operationGroup
       - where:
             group: Pipelines
+            op: CreateOrUpdate$|CreateOrUpdate#Create
             parameter: pipeline
         json: true
       - where:
@@ -82,22 +83,15 @@ cli:
             param: dataFactoryLocation
         name: location
       - where:
-            group: LinkedServices
-            op: CreateOrUpdate#Update
-        hidden: true
-      - where:
-            group: Datasets
-            op: CreateOrUpdate#Update
-        hidden: true
-      - where:
             group: Pipelines
             op: CreateOrUpdate#Update
             param: pipeline
         cli-flatten: true
       - where:
-            group: Triggers
+            group: Triggers|LinkedServices|Datasets
             op: CreateOrUpdate#Update
-        hidden: true
+            param: properties
+        cli-flatten: true
       - where:
             group: ManagedPrivateEndpoints
             param: managedVirtualNetworkName
