@@ -24,8 +24,7 @@ cli:
         alias:
             - pa_name
       - where:
-            type: Identity
-            prop: userAssignedIdentities
+            param: userAssignedIdentities
         alias:
             - uai
       - where:
