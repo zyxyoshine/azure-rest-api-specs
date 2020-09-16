@@ -80,6 +80,11 @@ cli:
             op: CreateOrUpdate
             param: parameters
         json: true
+      - where:
+            group: Clusters
+            op: CreateOrUpdate#Create
+            param: parameters
+        json: true
 ```
 ``` yaml $(az) && $(target-mode) != 'core'
 az:
