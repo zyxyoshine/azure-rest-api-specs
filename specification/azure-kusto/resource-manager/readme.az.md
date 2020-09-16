@@ -75,6 +75,11 @@ cli:
             param: attachedDatabaseConfigurationName
         alias:
             - attached_dc_name
+      - where:
+            group: Clusters
+            op: CreateOrUpdate
+            param: parameters
+        json: true
 ```
 ``` yaml $(az) && $(target-mode) != 'core'
 az:
