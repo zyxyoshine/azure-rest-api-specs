@@ -15,10 +15,17 @@ openapi-type: data-plane
 
 # Releases
 
+### Release 2.1-preview.2
+These settings apply only when `--tag=release_2_1_preview.2` is specified on the command line.
+``` yaml $(tag) == 'release_2_1_preview.2'
+input-file:
+  - preview/v2.1-preview.2/FormRecognizer.json
+```
+
 ### Release 2.1-preview
 These settings apply only when `--tag=release_2_1_preview` is specified on the command line.
 ``` yaml $(tag) == 'release_2_1_preview'
-input-file: 
+input-file:
   - preview/v2.1-preview.1/FormRecognizer.json
 ```
 
@@ -26,7 +33,7 @@ input-file:
 These settings apply only when `--tag=release_2_0` is specified on the command line.
 
 ``` yaml $(tag) == 'release_2_0'
-input-file: 
+input-file:
   - stable/v2.0/FormRecognizer.json
 ```
 
@@ -34,7 +41,7 @@ input-file:
 These settings apply only when `--tag=release_2_0_preview` is specified on the command line.
 
 ``` yaml $(tag) == 'release_2_0_preview'
-input-file: 
+input-file:
   - preview/v2.0/FormRecognizer.json
 ```
 
@@ -43,7 +50,7 @@ input-file:
 These settings apply only when `--tag=release_1_0` is specified on the command line.
 
 ``` yaml $(tag) == 'release_1_0'
-input-file: 
+input-file:
   - preview/v1.0/FormRecognizer.json
   - preview/v1.0/FormRecognizerReceipt.json
   - preview/v1.0/FormRecognizerReceiptOcr.json
@@ -99,7 +106,7 @@ java:
   with-single-async-method: true
 ```
 
-## Multi-API/Profile support for AutoRest v3 generators 
+## Multi-API/Profile support for AutoRest v3 generators
 
 AutoRest V3 generators require the use of `--tag=all-api-versions` to select api files.
 
@@ -120,10 +127,10 @@ input-file:
 
 ```
 
-If there are files that should not be in the `all-api-versions` set, 
+If there are files that should not be in the `all-api-versions` set,
 uncomment the  `exclude-file` section below and add the file paths.
 
 ``` yaml $(tag) == 'all-api-versions'
-#exclude-file: 
+#exclude-file:
 #  - $(this-folder)/Microsoft.Example/stable/2010-01-01/somefile.json
 ```
