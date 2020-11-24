@@ -96,6 +96,9 @@
             "$ref": "Disks.json#/parameters/DiskIdParameter"
           },
           {
+            "$ref": "Disks.json#/parameters/DiskRPNewSwitch"
+          },
+          {
             "$ref": "Disks.json#/parameters/ApiVersionParameter"
           }
         ],
@@ -105,7 +108,14 @@
             "schema": {
               "$ref": "Disks.json#/definitions/Disk"
             }
+          },
+          "202": {
+            "description": "Accepted."
           }
+        },
+        "x-ms-long-running-operation": true,
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "location"
         }
       }
     }
@@ -157,6 +167,17 @@
         "diskSku": {
           "description": "the disk sku.",
           "$ref": "Disks.json#/definitions/AccountType",
+          "readOnly": true
+        },
+        "freeSpaceGB": {
+          "description": "The space to be freed up.",
+          "type": "integer",
+          "format": "int64",
+          "readOnly": true
+        },
+        "creationData": {
+          "description": "The disk creation data",
+          "type": "string",
           "readOnly": true
         }
       }
@@ -321,6 +342,15 @@
       "in": "path",
       "required": true,
       "x-ms-parameter-location": "method"
+    },
+    "DiskRPNewSwitch": {
+      "description": "Switch for whether summary or detailed information is returned.",
+      "name": "showDetail",
+      "in": "query",
+      "required": false,
+      "type": "boolean",
+      "x-ms-parameter-location": "method",
+      "default": false
     }
   },
   "securityDefinitions": {
