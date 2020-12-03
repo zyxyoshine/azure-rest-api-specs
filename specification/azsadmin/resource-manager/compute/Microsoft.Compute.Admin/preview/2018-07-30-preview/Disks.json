@@ -169,11 +169,11 @@
         },
         "creationOption": {
           "description": "The disk creation option.",
-          "type": "string",
+          "$ref": "Disks.json#/definitions/DiskCreationOption",
           "readOnly": true
         },
         "exclusiveAllocatedSize": {
-          "description": "The exclusive allocated size.",
+          "description": "The exclusive allocated size for the disk.",
           "type": "integer",
           "format": "int64",
           "readOnly": true
@@ -262,6 +262,25 @@
       ],
       "x-ms-enum": {
         "name": "AccountType",
+        "modelAsString": true
+      }
+    },
+    "DiskCreationOption": {
+      "description": "Disk creation option.",
+      "type": "string",
+      "enum": [
+        "Empty",
+        "FromImage",
+        "Import",
+        "Copy",
+        "Restore",
+        "FromPreprovisioned",
+        "Undelete",
+        "Upload",
+        "RecoverFromBlob"
+      ],
+      "x-ms-enum": {
+        "name": "DiskCreationOption",
         "modelAsString": true
       }
     }
