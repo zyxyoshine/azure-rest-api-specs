@@ -162,17 +162,17 @@
           "$ref": "Disks.json#/definitions/AccountType",
           "readOnly": true
         },
-        "CreationSourceUri": {
+        "creationSourceUri": {
           "description": "The disk creation source uri.",
           "type": "string",
           "readOnly": true
         },
-        "CreationOption": {
+        "creationOption": {
           "description": "The disk creation option.",
           "type": "string",
           "readOnly": true
         },
-        "ExclusiveAllocatedSize": {
+        "exclusiveAllocatedSize": {
           "description": "The exclusive allocated size.",
           "type": "integer",
           "format": "int64",

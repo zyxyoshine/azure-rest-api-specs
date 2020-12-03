@@ -20,7 +20,10 @@
           "provisionSizeGB": 200,
           "userResourceId": "/subscriptions/4496690e-348e-4dc0-addc-17395c3966ba/resourceGroups/DISKRG6ECD14E6/providers/Microsoft.Compute/Disks/diskrptest9vb55sb15w",
           "diskType": "Disk",
-          "diskSku": "Standard_LRS"
+          "diskSku": "Standard_LRS",
+          "CreationSourceUri": "/subscriptions/cac6833e-89af-4feb-a512-fdcf6cf4a5e8/resourceGroups/diskrptest/providers/Microsoft.Compute/disks/testmd01",
+          "CreationOption": "Copy",
+          "ExclusiveAllocatedSize": 1000
         }
       }
     }
